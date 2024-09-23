@@ -28,7 +28,7 @@ header {
 main {
   width: 100vw;
   min-height: 100vh;
-  padding: 5.3125rem 0.3125rem 0.3125rem 0.3125rem;
+  padding: 5.0625rem 0.3125rem 0.3125rem 0.3125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,6 +56,9 @@ main .title {
 
 .panel-top button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 0.3125rem;
