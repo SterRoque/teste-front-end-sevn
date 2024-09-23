@@ -10,16 +10,16 @@ export function generateHTMLClassification(
   const htmlClassification = `
       <div class="classification">
            <div class="team">
-             <img src="src/assets/team_shield_${teamHome}.svg" alt="Time ${teamHome.toUpperCase()}" />
+             <img src="/icons/team_shield_${teamHome}.svg" alt="Time ${teamHome.toUpperCase()}" />
              <p>Time ${teamHome.toUpperCase()}</p>
            </div>
            <div class="points">
              <p>${game.team_home_score}</p>
-             <img src="src/assets/x.svg" alt="" width="12px" height="12px" />
+             <img src="/icons/x.svg" alt="" width="12px" height="12px" />
              <p>${game.team_away_score}</p>
            </div>
            <div class="team">
-             <img src="src/assets/team_shield_${teamAway}.svg" alt="Time ${teamAway.toUpperCase()}" />
+             <img src="/icons/team_shield_${teamAway}.svg" alt="Time ${teamAway.toUpperCase()}" />
              <p>Time ${teamAway.toUpperCase()}</p>
            </div>
   
