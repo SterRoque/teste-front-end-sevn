@@ -24,13 +24,8 @@
       <div class="panel" id="panel">
         <!--Essa parte é o topo do painel-->
         <div class="panel-top">
-          <button>
-            <img
-              src="assets/arrow-left.svg"
-              alt="Botão de voltar esquerdo"
-              id="prev-button"
-              onclick="alert(`oii`)"
-            />
+          <button id="prev-button" disabled>
+            <img src="assets/arrow-left.svg" alt="Botão de voltar esquerdo" />
           </button>
 
           <div>
@@ -38,14 +33,12 @@
             <p id="current-round-text">Rodada 1</p>
           </div>
 
-          <button>
-            <img
-              src="assets/arrow-right.svg"
-              alt="Botão de avançar direito"
-              id="next-button"
-            />
+          <button id="next-button">
+            <img src="assets/arrow-right.svg" alt="Botão de avançar direito" />
           </button>
         </div>
+
+        <div id="games"></div>
       </div>
     </main>
 
