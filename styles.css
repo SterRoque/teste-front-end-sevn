@@ -50,8 +50,13 @@ main .title {
   gap: 3rem;
   margin-bottom: 56px;
 }
-.panel-top img {
+.panel-top button {
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 0.3125rem;
+  border: none;
+  background-color: #33b667;
 }
 
 .panel-top h3 {

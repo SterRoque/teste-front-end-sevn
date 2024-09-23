@@ -24,15 +24,28 @@
       <div class="panel" id="panel">
         <!--Essa parte é o topo do painel-->
         <div class="panel-top">
-          <img src="assets/btn_left.svg" alt="Botão de voltar esquerdo" />
+          <button>
+            <img
+              src="assets/arrow-left.svg"
+              alt="Botão de voltar esquerdo"
+              id="prev-button"
+              onclick="alert(`oii`)"
+            />
+          </button>
+
           <div>
             <h3>Rodadas de Jogos</h3>
-            <p>Rodada 1</p>
+            <p id="current-round-text">Rodada 1</p>
           </div>
-          <img src="assets/btn_right.svg" alt="Botão de avançar direito" />
-        </div>
 
-        <!--Essa parte é o corpo do painel (classificação)-->
+          <button>
+            <img
+              src="assets/arrow-right.svg"
+              alt="Botão de avançar direito"
+              id="next-button"
+            />
+          </button>
+        </div>
       </div>
     </main>
 
