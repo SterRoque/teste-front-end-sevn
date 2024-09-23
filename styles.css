@@ -28,6 +28,7 @@ header {
 main {
   width: 100vw;
   min-height: 100vh;
+  padding: 5.3125rem 0.3125rem 0.3125rem 0.3125rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,6 +38,8 @@ main {
 main .title {
   font-size: 1.625rem;
   font-weight: 400;
+  text-align: center;
+  margin-bottom: 4.375rem;
 }
 
 .panel {
@@ -48,15 +51,21 @@ main .title {
 .panel .panel-top {
   display: flex;
   gap: 3rem;
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem;
 }
+
 .panel-top button {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 0.3125rem;
   border: none;
   background-color: #33b667;
+}
+
+.panel-top button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
 }
 
 .panel-top h3 {
@@ -64,6 +73,7 @@ main .title {
   font-weight: 400;
   text-align: center;
 }
+
 .panel-top p {
   font-size: 0.9063rem;
   font-weight: 700;
@@ -82,6 +92,7 @@ main .title {
   gap: 0.625rem;
   align-items: center;
 }
+
 .classification .points {
   display: flex;
   align-items: center;
@@ -90,7 +101,7 @@ main .title {
 
 .divider {
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
   background-color: #ddd;
   margin-top: 1rem;
   margin-bottom: 1rem;
