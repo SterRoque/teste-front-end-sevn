@@ -1,6 +1,6 @@
-import { Round } from "../interfaces/tournament-interface";
+import { IRound } from "../interfaces/tournament-interface";
 
-type TListRoundsServiceResponse = Round[];
+type TListRoundsServiceResponse = IRound[];
 
 export async function listRoundsService(): Promise<TListRoundsServiceResponse> {
   const response = await fetch(import.meta.env.VITE_APP_API_URL);

@@ -1,9 +1,9 @@
-import { Round } from "./interfaces/tournament-interface.js";
+import { IRound } from "./interfaces/tournament-interface.js";
 import { listRoundsService } from "./services/list-rounds-service.js";
 import { generateHTMLClassification } from "./utils/generate-html-classification.js";
 
 let currentRound = 1;
-let allRoundsGames: Round[] = [];
+let allRoundsGames: IRound[] = [];
 
 const gamesContainer = document.getElementById("games") as HTMLElement;
 const prevButton = document.getElementById("prev-button") as HTMLButtonElement;

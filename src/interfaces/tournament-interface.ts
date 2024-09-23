@@ -1,4 +1,4 @@
-export interface Game {
+export interface IGame {
   team_home_id: string;
   team_home_name: string;
   team_home_score: number;
@@ -7,7 +7,7 @@ export interface Game {
   team_away_score: number;
 }
 
-export interface Round {
+export interface IRound {
   round: number;
-  games: Game[];
+  games: IGame[];
 }

@@ -1,7 +1,7 @@
-import { Game } from "../interfaces/tournament-interface";
+import { IGame } from "../interfaces/tournament-interface";
 
 export function generateHTMLClassification(
-  game: Game,
+  game: IGame,
   isLastGameOfCurrentRound: boolean = false
 ) {
   const teamHome = game.team_home_id.slice(-1);
