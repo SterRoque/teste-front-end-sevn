@@ -1,13 +1,17 @@
+import { Round } from "./interfaces/tournament-interface.js";
 import { listRoundsService } from "./services/list-rounds-service.js";
 import { generateHTMLClassification } from "./utils/generate-html-classification.js";
 
 let currentRound = 1;
-let allRoundsGames = [];
+let allRoundsGames: Round[] = [];
 
-const gamesContainer = document.getElementById("games");
-const prevButton = document.getElementById("prev-button");
-const nextButton = document.getElementById("next-button");
-const currentRoundText = document.getElementById("current-round-text");
+const gamesContainer = document.getElementById("games") as HTMLElement;
+const prevButton = document.getElementById("prev-button") as HTMLButtonElement;
+
+const nextButton = document.getElementById("next-button") as HTMLButtonElement;
+const currentRoundText = document.getElementById(
+  "current-round-text"
+) as HTMLElement;
 
 async function loadRoundsGames() {
   allRoundsGames = await listRoundsService();
@@ -57,6 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   nextButton.addEventListener("click", () => {
     currentRound++;
+
     currentRoundText.textContent = `Rodada ${currentRound}`;
 
     verifyNavigateButtons();
@@ -67,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   prevButton.addEventListener("click", () => {
     currentRound--;
+
     currentRoundText.textContent = `Rodada ${currentRound}`;
 
     verifyNavigateButtons();
