@@ -1,4 +1,5 @@
-import { listRoundsService } from "./list-rounds-service.js";
+import { listRoundsService } from "./services/list-rounds-service.js";
+import { generateHTMLClassification } from "./utils/generate-html-classification.js";
 
 let currentRound = 1;
 let allRoundsGames = [];
@@ -14,9 +15,6 @@ async function loadRoundsGames() {
 
 function showRounds() {
   for (const game of allRoundsGames[currentRound - 1].games) {
-    const teamHome = game.team_home_id.slice(-1);
-    const teamAway = game.team_away_id.slice(-1);
-
     const lastGameOfCurrentRound =
       allRoundsGames[currentRound - 1].games[
         allRoundsGames[currentRound - 1].games.length - 1
@@ -26,27 +24,10 @@ function showRounds() {
       game.team_home_id === lastGameOfCurrentRound.team_home_id &&
       game.team_away_id === lastGameOfCurrentRound.team_away_id;
 
-    const htmlClassification = `
-    <div class="classification">
-         <div class="team">
-           <img src="assets/team_shield_${teamHome}.svg" alt="Time ${teamHome.toUpperCase()}" />
-           <p>Time ${teamHome.toUpperCase()}</p>
-         </div>
-         <div class="points">
-           <p>${game.team_home_score}</p>
-           <img src="assets/x.svg" alt="" width="12px" height="12px" />
-           <p>${game.team_away_score}</p>
-         </div>
-         <div class="team">
-           <img src="assets/team_shield_${teamAway}.svg" alt="Time ${teamAway.toUpperCase()}" />
-           <p>Time ${teamAway.toUpperCase()}</p>
-         </div>
-
-         </div>
-         
-         ${!isLastGameOfCurrentRound ? '<div class="divider"></div>' : ""}
-
- `;
+    const htmlClassification = generateHTMLClassification(
+      game,
+      isLastGameOfCurrentRound
+    );
 
     gamesContainer.innerHTML += htmlClassification;
   }
